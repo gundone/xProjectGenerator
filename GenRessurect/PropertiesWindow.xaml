@@ -1,0 +1,16 @@
+﻿<Window x:Name="PropertiesWindow1" x:Class="GenRessurect.PropertiesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenRessurect"
+        mc:Ignorable="d"
+        Title="Properties" Height="141.516" Width="338.801" Loaded="PropertiesWindow1_Loaded" Closing="PropertiesWindow1_Closing">
+    <Grid>
+        <CheckBox x:Name="ThreadWaitingCheckBox" Content="Do not wait for thread finishing" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="262" Click="ThreadWaitingCheckBox_Click"/>
+        <TextBox x:Name="NextProjectPauseTextBox" HorizontalAlignment="Left" Height="23" Margin="10,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" TextAlignment="Center" PreviewTextInput="NextProjectPause_PreviewTextInput" TextChanged="NextProjectPause_TextChanged"/>
+        <Label Content="Pause before next project (seconds)" HorizontalAlignment="Left" Margin="123,30,0,0" VerticalAlignment="Top" Width="198"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="123,0,0,18" Width="75" Height="20" VerticalAlignment="Bottom" Click="Button_Click"/>
+
+    </Grid>
+</Window>

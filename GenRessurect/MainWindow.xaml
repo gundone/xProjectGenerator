@@ -1,0 +1,31 @@
+﻿<Window x:Class="GenRessurect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenRessurect"
+        mc:Ignorable="d"
+        Title="Generator2" Height="233.145" Width="285.86" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem x:Name="ExitMenuItem" Header="Exit" InputGestureText="Alt+F4" Click="ExitMenuItemClick"/>
+            </MenuItem>
+            <MenuItem x:Name="PropertiesMenuItem" Header="Properties" Click="PropertiesMenuItem_Click"/>
+        </Menu>
+
+        <TextBox Grid.Row="1" x:Name="XrumerPathTexBox" Style="{StaticResource placeHolder}" Tag="Double-click to choose xpymep.exe directory" Height="23" Margin="10,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" MouseDoubleClick="XrumerPathTexBox_MouseDoubleClick" TextChanged="XrumerPathTexBox_TextChanged"/>
+        <TextBox Grid.Row="1" x:Name="LinksTextBox"  Style="{StaticResource placeHolder}" Tag="Double-click to choose links directory" Margin="10,38,10,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" TextChanged="LinksTextBox_TextChanged" MouseDoubleClick="LinksTextBox_MouseDoubleClick"/>
+        <TextBox Grid.Row="1" x:Name="EmailsTextBox" Style="{StaticResource placeHolder}" Tag="Double-click to choose emails file" Height="23" Margin="10,66,10,0" TextWrapping="Wrap" VerticalAlignment="Top" MouseDoubleClick="EmailsTextBox_MouseDoubleClick" TextChanged="EmailsTextBox_TextChanged"/>
+        <TextBox Grid.Row="1" x:Name="OutputTextBox" Style="{StaticResource placeHolder}" Tag="Double-click to choose output directory" Height="23" Margin="10,94,10,0" TextWrapping="Wrap" VerticalAlignment="Top" MouseDoubleClick="OutputTextBox_MouseDoubleClick" TextChanged="OutputTextBox_TextChanged"/>
+
+        <ProgressBar Grid.Row="1" x:Name="ProcessedLinesProgressBar" Margin="10,122,10,0" Height="13" VerticalAlignment="Top"/>
+        <Button Grid.Row="1" x:Name="GenerateProjectsButton" Content="Generate projects" Margin="10,140,0,0" VerticalAlignment="Top" Click="GenerateButton_Click" Height="20" HorizontalAlignment="Left" Width="109"/>
+        <Button Grid.Row="1" x:Name="GenerateSchedule_Button" Content="Generate Schedule" Margin="0,140,10,0" VerticalAlignment="Top" Click="GenerateSchedule_Click" HorizontalAlignment="Right" Width="109" Height="20"/>
+
+    </Grid>
+</Window>
